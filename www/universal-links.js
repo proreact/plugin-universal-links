@@ -1,20 +1,20 @@
 "use strict";
 
-const exec = require( "cordova/exec" );
+var exec = require( "cordova/exec" );
 
 // Reference name for the plugin
-const PLUGIN_NAME = "UniversalLinks";
+var PLUGIN_NAME = "UniversalLinks";
 
 // Default event name that is used by the plugin
-const DEFAULT_EVENT_NAME = "didLaunchAppFromLink";
+var DEFAULT_EVENT_NAME = "didLaunchAppFromLink";
 
 // Plugin methods on the native side that can be called from JavaScript
-const pluginNativeMethod = {
+var pluginNativeMethod = {
 	SUBSCRIBE : "jsSubscribeForEvent",
 	UNSUBSCRIBE : "jsUnsubscribeFromEvent"
 };
 
-const universalLinks = {
+var universalLinks = {
 	/**
 	 * Subscribe to event.
 	 * If plugin already captured that event - callback will be called immidietly.
