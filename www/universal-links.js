@@ -33,7 +33,7 @@ var universalLinks = {
 			eventName = DEFAULT_EVENT_NAME;
 		}
 
-		const innerCallback = msg => {
+		var innerCallback = msg => {
 			callback( msg.data );
 		};
 
