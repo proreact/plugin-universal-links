@@ -20,7 +20,7 @@ var universalLinks = {
 	 * @param {String} eventName - name of the event you are subscribing on; if null - default plugin event is used
 	 * @param {Function} callback - callback that is called when event is captured
 	 */
-	subscribe : ( eventName, callback ) => {
+	subscribe : function(eventName, callback) {
 		if( !callback ) {
 			// eslint-disable-next-line no-console
 			console.warn( "Universal Links: can't subscribe to event without a callback" );
@@ -31,7 +31,7 @@ var universalLinks = {
 			eventName = DEFAULT_EVENT_NAME;
 		}
 
-		var innerCallback = msg => {
+		var innerCallback = function(msg) {
 			callback( msg.data );
 		};
 
@@ -43,7 +43,7 @@ var universalLinks = {
 	 *
 	 * @param {String} eventName - from what event we are unsubscribing
 	 */
-	unsubscribe : eventName => {
+	unsubscribe : function(eventName) {
 		if( !eventName ) {
 			eventName = DEFAULT_EVENT_NAME;
 		}
