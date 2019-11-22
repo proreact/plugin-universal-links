@@ -1,5 +1,3 @@
-"use strict";
-
 var exec = require( "cordova/exec" );
 
 // Reference name for the plugin
